@@ -22,6 +22,7 @@ const ListadoGastos = ({gastos, setGastoEditar, eliminarGasto, gastosFiltrados, 
           ) : (
             <>
               <h2>{gastos.length ? 'Gastos' : 'Aun no hay gastos'}</h2>
+              {gastos.length ? <div className='swipeactions'><span>Desliza hacia la derecha para editar</span><span>Desliza hacia la izquierda para eliminar</span></div> : ''}
               {gastos.map( gasto => (
               <Gasto
                   key={gasto.id}
